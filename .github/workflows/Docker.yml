@@ -1,4 +1,4 @@
-name: dockerloginDEVQA
+name: dockerbuild
 
 # Controls when the workflow will run
 on:
@@ -18,19 +18,9 @@ jobs:
       with:
        username: ${{secrets.DOCKERHUBUSERNAME}}
        password: ${{secrets.DOCKERHUBPASSWORD}}
-    - name: Docker Pull
-      run: docker pull postgres
+    - name: Docker Build
+      run: docker build -t sampledocker .
     - name: Docker Tag
-      run: docker tag postgres dockerakhila/postgres
+      run: docker tag sampledocker dockerakhila/sampledocker
     - name: Docker Push
-      run: docker push dockerakhila/postgres
-  LogintodockerhubQA:
-    runs-on: ubuntu-latest
-    environment: QA
-    steps:
-    - uses: actions/checkout@v3
-    - name: docker login
-      uses: docker/login-action@v2.1.0
-      with:
-       username: ${{secrets.DOCKERHUBUSERNAME}}
-       password: ${{secrets.DOCKERHUBPASSWORD}}
+      run: docker push dockerakhila/sampledocker
