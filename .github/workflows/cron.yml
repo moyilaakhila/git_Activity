@@ -1,9 +1,9 @@
-name: Daily Action at 10:22 PM IST
+name: Daily Action 
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '23 5 * * *'  # 4:52 PM UTC corresponds to 10:22 PM IST
+    - cron: '23 5 * * *'  
 
 jobs:
   example-job:
@@ -12,4 +12,4 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Run a script
-        run: echo "This action runs every day at 10:22 PM IST!"
+        run: echo "This action runs every day"
