@@ -1,9 +1,10 @@
-name: Daily Action at 9 PM IST
- 
+name: Daily Action at 10:22 PM IST
+
 on:
+  workflow_dispatch:
   schedule:
-    - cron: '12 22 * * *'  # This is in UTC, so it's 9 PM IST (India/Kolkata)
- 
+    - cron: '52 16 * * *'  # 4:52 PM UTC corresponds to 10:22 PM IST
+
 jobs:
   example-job:
     runs-on: ubuntu-latest
@@ -11,4 +12,4 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Run a script
-        run: echo "This action runs every day at 9 PM IST!"
+        run: echo "This action runs every day at 10:22 PM IST!"
