@@ -3,7 +3,7 @@ name: Daily Action at 10:22 PM IST
 on:
   workflow_dispatch:
   schedule:
-    - cron: '54 16 * * *'  # 4:52 PM UTC corresponds to 10:22 PM IST
+    - cron: '04 17 * * *'  # 4:52 PM UTC corresponds to 10:22 PM IST
 
 jobs:
   example-job:
