@@ -3,7 +3,7 @@ name: Daily Action
 on:
   workflow_dispatch:
   schedule:
-    - cron: '23 5 * * *'  
+    - cron: '25 17 * * *'  
 
 jobs:
   example-job:
