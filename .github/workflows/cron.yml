@@ -2,7 +2,7 @@ name: Daily Action at 9 PM IST
  
 on:
   schedule:
-    - cron: '48 16 * * *'  # This is in UTC, so it's 9 PM IST (India/Kolkata)
+    - cron: '48 16 * * *'
  
 jobs:
   example-job:
