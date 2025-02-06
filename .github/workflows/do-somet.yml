@@ -1,6 +1,7 @@
 name: Do anything after the release of the first workflow
 
 on:
+  workflow_dispatch: null
   workflow_run:
     workflows: ["CI release"]
     types:
